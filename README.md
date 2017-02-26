@@ -15,17 +15,18 @@ single table. Can merge counts from comma separated pairs of file names.
 **Optional arguments**:  
 &nbsp;-h, --help  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit  
-&nbsp;-o, --outName <OUTNAME>
+&nbsp;-o, --outName *OUTNAME*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Write concatenated count table to this file.  
-&nbsp;-d, --outDir <OUTDIR>  
+&nbsp;-d, --outDir *OUTDIR*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory for output file to be written to.  
-&nbsp;-n, --featureNames <FEATURENAMES>  
+&nbsp;-n, --featureNames *FEATURENAMES*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep feature names that start with this string. i.e. 'ge' will return 'gene_001'  
 
 ## Example  
 
 ```bash
-./catcount.py -n gene_ -d results -o catcounttable.tab -i Con1_rep1.txt,Con1_rep1_unpaired_reads.txt Con1_rep2.txt Con2_rep1.txt Con2_rep2.txt,Con2_rep2_unpaired_reads.txt
+./catcount.py -n gene_ -d results -o catcounttable.tab \
+-i Con1_rep1.txt,Con1_rep1_unpaired_reads.txt Con1_rep2.txt Con2_rep1.txt Con2_rep2.txt,Con2_rep2_unpaired_reads.txt
 ```
 
 - Only report counts for features beginning with the string "gene_"
