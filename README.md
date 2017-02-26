@@ -1,30 +1,31 @@
-# catcount
-Concatenate count tables for RNA-seq reads mapped to features by htseq-count
+# catcount.py
+Concatenate count tables for RNA-seq reads mapped to features by htseq-count  
 
-## Usage
-```bash
-catcount [-h] [-i INFILES [INFILES ...]] [-o OUTNAME] [-d OUTDIR]
-                [-n FEATURENAMES]
-```
+## Usage  
+
+catcount [-h] [-i INFILES [INFILES ...]] [-o OUTNAME] [-d OUTDIR] [-n FEATURENAMES]  
+
 Takes a list of files containing counts by feature name and concatenates into
 single table. Can merge counts from comma separated pairs of file names.
 
-**Optional arguments**:
-  -h, --help            show this help message and exit  
-  -i INFILES [INFILES ...], --inFiles INFILES [INFILES ...]  
-                        List of count files or pairs of files.  
-  -o OUTNAME, --outName OUTNAME  
-                        Write concatenated count table to this file.  
-  -d OUTDIR, --outDir OUTDIR  
-                        Directory for output file to be written to.  
-  -n FEATURENAMES, --featureNames FEATURENAMES  
-                        Keep feature names that start with this string. i.e.  
-                        'ge' will return 'gene_001'  
+**Required arguments**:  
+&nbsp;-i INFILES [INFILES ...], --inFiles INFILES [INFILES ...]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of count files or pairs of files.  
+
+**Optional arguments**:  
+&nbsp;-h, --help
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit  
+&nbsp;-o OUTNAME, --outName OUTNAME  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Write concatenated count table to this file.  
+&nbsp;-d OUTDIR, --outDir OUTDIR  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory for output file to be written to.  
+&nbsp;-n FEATURENAMES, --featureNames FEATURENAMES  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep feature names that start with this string. i.e. 'ge' will return 'gene_001'  
 
 ## Example  
 
 ```bash
-catcount.py -n gene_ -d results -o catcounttable.tab -i Con1_rep1.txt,Con1_rep1_unpaired_reads.txt Con1_rep2.txt Con2_rep1.txt Con2_rep2.txt,Con2_rep2_unpaired_reads.txt
+./catcount.py -n gene_ -d results -o catcounttable.tab -i Con1_rep1.txt,Con1_rep1_unpaired_reads.txt Con1_rep2.txt Con2_rep1.txt Con2_rep2.txt,Con2_rep2_unpaired_reads.txt
 ```
 
 - Only report counts for features beginning with the string "gene_"
