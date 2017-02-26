@@ -9,18 +9,18 @@ Takes a list of files containing counts by feature name and concatenates into
 single table. Can merge counts from comma separated pairs of file names.
 
 **Required arguments**:  
-&nbsp;-i, --inFiles [INFILES ...]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of count files or pairs of files.  
+&nbsp;&nbsp;&nbsp;-i, --inFiles [INFILES ...]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of count files or pairs of files.  
 
 **Optional arguments**:  
-&nbsp;-h, --help  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit  
-&nbsp;-o, --outName *OUTNAME*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Write concatenated count table to this file.  
-&nbsp;-d, --outDir *OUTDIR*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory for output file to be written to.  
-&nbsp;-n, --featureNames *FEATURENAMES*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep feature names that start with this string. i.e. 'ge' will return 'gene_001'  
+&nbsp;&nbsp;&nbsp;-h, --help  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit  
+&nbsp;&nbsp;&nbsp;-o, --outName *OUTNAME*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Write concatenated count table to this file.  
+&nbsp;&nbsp;&nbsp;-d, --outDir *OUTDIR*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory for output file to be written to.  
+&nbsp;&nbsp;&nbsp;-n, --featureNames *FEATURENAMES*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep feature names that start with this string. i.e. 'ge' will return 'gene_001'  
 
 ## Example  
 
