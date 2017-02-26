@@ -3,23 +3,23 @@ Concatenate count tables for RNA-seq reads mapped to features by htseq-count
 
 ## Usage  
 
-catcount [-h] [-i INFILES [INFILES ...]] [-o OUTNAME] [-d OUTDIR] [-n FEATURENAMES]  
+**catcount [-h] [-i INFILES [INFILES ...]] [-o OUTNAME] [-d OUTDIR] [-n FEATURENAMES]**  
 
 Takes a list of files containing counts by feature name and concatenates into
 single table. Can merge counts from comma separated pairs of file names.
 
 **Required arguments**:  
-&nbsp;-i INFILES [INFILES ...], --inFiles INFILES [INFILES ...]  
+&nbsp;-i, --inFiles [INFILES ...]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of count files or pairs of files.  
 
 **Optional arguments**:  
-&nbsp;-h, --help
+&nbsp;-h, --help  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit  
-&nbsp;-o OUTNAME, --outName OUTNAME  
+&nbsp;-o, --outName <OUTNAME>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Write concatenated count table to this file.  
-&nbsp;-d OUTDIR, --outDir OUTDIR  
+&nbsp;-d, --outDir <OUTDIR>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory for output file to be written to.  
-&nbsp;-n FEATURENAMES, --featureNames FEATURENAMES  
+&nbsp;-n, --featureNames <FEATURENAMES>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep feature names that start with this string. i.e. 'ge' will return 'gene_001'  
 
 ## Example  
