@@ -105,7 +105,11 @@ def main(args):
 
 	filledtable = populatetable(mastertable,args.inFiles,args)
 
-	filledtable.to_csv(path_or_buf=outpath, sep='\t', header=True, index=True, line_terminator='\n')
+	outopen = open(outpath, 'wb')
+
+	filledtable.to_csv(path_or_buf=outopen, sep='\t', header=True, index=True, line_terminator='\n')
+
+	outopen.close()
 
 if __name__== '__main__':
 	###Argument handling.
