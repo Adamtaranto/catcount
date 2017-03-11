@@ -105,7 +105,7 @@ def main(args):
 
 	filledtable = populatetable(mastertable,args.inFiles,args)
 
-	outopen = open(outpath, 'wb')
+	outopen = open(outpath, 'w')
 
 	filledtable.to_csv(path_or_buf=outopen, sep='\t', header=True, index=True, line_terminator='\n')
 
